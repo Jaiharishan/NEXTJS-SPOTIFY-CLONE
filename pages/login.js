@@ -4,20 +4,21 @@ import {signIn} from 'next-auth/react';
 import {getProviders} from 'next-auth/react';
 
 
-function Login () {
+function Login ({providers}) {
 
-    const [providers, setProviders] = useState({});
+    // const [providers, setProviders] = useState({});
+    
 
-    useEffect(() => {
-      (async () => {
-        const res = await getProviders();
-        setProviders(res);
-      })();
-    }, []);
+    // useEffect(() => {
+    //   (async () => {
+    //     const res = await getProviders();
+    //     setProviders(res);
+    //   })();
+    // }, []);
 
     return (
         <div className='flex flex-col items-center justify-center min-h-screen w-full bg-black'>
-            <img className='w-52 mb-5 mt-5' src="https://links.papareact.com/9xl" alt="spotify" />
+            <img className='w-52 mb-5 mt-5' src="https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png" alt="spotify" />
 
             {Object.values(providers).map(provider => {
                 return <div key={provider.name}>
@@ -35,12 +36,12 @@ function Login () {
 
 export default Login;
 
-// export async function getServerSideProps() {
-//     const providers = await getProviders();
+export async function getServerSideProps() {
+    const providers = await getProviders();
 
-//     return {
-//         props: {providers}
-//     }
-// }
+    return {
+        props: {providers}
+    }
+}
 
 
