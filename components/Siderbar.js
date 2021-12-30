@@ -31,7 +31,7 @@ const Siderbar = () => {
         <div className='text-gray-500 p-5 text-sm border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide pr-12
         sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36'>
             <div className='space-y-4'>
-                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt='spitify-logo' className='py-3 w-36'/>
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt='spotify-logo' className='py-3 w-36'/>
                 <button className='flex items-center space-x-2 hover:text-white transition-colors delay-100'>
                     <HomeIcon className='h-5 w-5' />
                     <p>Home</p>
